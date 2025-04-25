@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE DIGITAL | Premium Websites for Local Shops</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0a0a0a',
+                        secondary: '#1a1a1a',
+                        accent: '#D4AF37', // Gold
+                        light: '#f8f8f8',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-in-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/css">
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f8f8;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+        }
+        
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(212, 175, 55, 0.6);
+        }
+        
+        .btn-outline-gold {
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-gold:hover {
+            background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+            color: #0a0a0a;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+            left: 0;
+            background: #D4AF37;
+        }
+        
+        .service-card {
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-item {
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .portfolio-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .testimonial-card {
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .floating-img {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .border-gold {
+            border-color: #D4AF37;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+        }
+        
+        ::selection {
+            background: rgba(212, 175, 55, 0.3);
+        }
+        
+        .back-to-top {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white z-50 shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-3xl font-bold text-primary">
+                        <span class="gold-text-gradient">LUXE</span> DIGITAL
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#home" class="nav-link text-primary font-medium">Home</a>
+                    <a href="#services" class="nav-link text-primary font-medium">Services</a>
+                    <a href="#portfolio" class="nav-link text-primary font-medium">Portfolio</a>
+                    <a href="#pricing" class="nav-link text-primary font-medium">Pricing</a>
+                    <a href="#about" class="nav-link text-primary font-medium">About</a>
+                    <a href="#contact" class="px-6 py-2 btn-gold rounded-full font-medium text-primary hover:shadow-lg transform transition-all duration-300 hover:-translate-y-1">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-primary focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-6 px-6">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="nav-link text-primary font-medium">Home</a>
+                <a href="#services" class="nav-link text-primary font-medium">Services</a>
+                <a href="#portfolio" class="nav-link text-primary font-medium">Portfolio</a>
+                <a href="#pricing" class="nav-link text-primary font-medium">Pricing</a>
+                <a href="#about" class="nav-link text-primary font-medium">About</a>
+                <a href="#contact" class="px-6 py-2 btn-gold rounded-full font-medium text-primary text-center">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+        <div class="absolute w-full h-full top-0 left-0 bg-black opacity-5 z-0"></div>
+        <div class="max-w-7xl mx-auto px-6 z-10 relative">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-serif font-bold text-primary mb-6">
+                        <span class="gold-text-gradient">Premium Websites</span> for Your Local Business
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        We create stunning, high-converting websites for local shops that attract customers and boost sales. Your digital storefront deserves the luxury treatment.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="px-8 py-4 bg-accent text-primary font-bold rounded-full hover:shadow-lg transform transition-all duration-300 hover:-translate-y-1 btn-gold text-center">
+                            Request a Quote
+                        </a>
+                        <a href="#portfolio" class="px-8 py-4 border-2 border-accent text-accent font-bold rounded-full hover:bg-accent hover:text-primary transition-all duration-300 text-center">
+                            View Our Work
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <div class="absolute -top-10 -left-10 w-32 h-32 bg-accent rounded-full opacity-20 filter blur-xl"></div>
+                        <div class="absolute -bottom-12 -right-8 w-32 h-32 bg-accent rounded-full opacity-20 filter blur-xl"></div>
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8b6445?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Luxury Website Design" 
+                             class="rounded-3xl shadow-2xl floating-img border-8 border-white">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 right-0 overflow-hidden h-[150px]">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="absolute bottom-0 w-full h-auto">
+                <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="fill-current text-accent opacity-20"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Clients Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-serif font-medium text-gray-500 mb-2">TRUSTED BY PREMIUM LOCAL BUSINESSES</h2>
+                <div class="w-20 h-1 gold-gradient mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-70">
+                <img src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" class="h-8">
+                <img src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" class="h-8">
+                <img src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit" class="h-8">
+                <img src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor" class="h-8">
+                <img src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation" class="h-8">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-serif font-medium text-lg">OUR SERVICES</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mt-3 mb-4">Tailored Digital Solutions <span class="gold-text-gradient">For Your Shop</span></h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed">
+                    We provide comprehensive website solutions designed specifically for local shops in fashion, footwear and accessories. Elevate your online presence with our premium services.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-xl">
+                    <div class="w-14 h-14 gold-gradient rounded-lg flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-shopping-bag text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-primary mb-3">E-Commerce Websites</h3>
+                    <p class="text-gray-600 mb-6">
+                        Fully functional online stores with secure payment gateways, inventory management and customer accounts tailored to your products.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Product showcase with high-quality visuals</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Secure payment processing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Inventory and order management</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-xl">
+                    <div class="w-14 h-14 gold-gradient rounded-lg flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-primary mb-3">Responsive Design</h3>
+                    <p class="text-gray-600 mb-6">
+                        Websites that look stunning and function perfectly on all devices - from desktop to smartphones and tablets.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Mobile-optimized layouts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Touch-friendly navigation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Fast loading speeds</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-xl">
+                    <div class="w-14 h-14 gold-gradient rounded-lg flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-search-dollar text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-primary mb-3">SEO Optimization</h3>
+                    <p class="text-gray-600 mb-6">
+                        We build websites that get found. Our SEO-optimized sites help you rank higher in local searches and attract more customers.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Local SEO implementation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Keyword optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Google My Business integration</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-xl">
+                    <div class="w-14 h-14 gold-gradient rounded-lg flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-camera-retro text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-primary mb-3">Product Photography</h3>
+                    <p class="text-gray-600 mb-6">
+                        Professional product photography that showcases your merchandise in the best possible light to attract more customers.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Studio-quality product images</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Lifestyle product shots</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Image editing and optimization</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-xl">
+                    <div class="w-14 h-14 gold-gradient rounded-lg flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-primary mb-3">Analytics & Insights</h3>
+                    <p class="text-gray-600 mb-6">
+                        We provide detailed analytics to help you understand your customers and make data-driven decisions to grow your business.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Visitor behavior tracking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Conversion rate optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Custom reporting dashboards</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-xl">
+                    <div class="w-14 h-14 gold-gradient rounded-lg flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-primary mb-3">Premium Support</h3>
+                    <p class="text-gray-600 mb-6">
+                        Ongoing support and maintenance to ensure your website remains secure, up-to-date and performing at its best.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>24/7 website monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt-0.5 mr-2" fill="none stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Regular updates and backups</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mt="0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Priority technical support</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Showcase -->
+    <section id="portfolio" class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-serif font-medium text-lg">OUR WORK</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mt-3 mb-4">Showcase of <span class="gold-text-gradient">Premium Websites</span></h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
+                    Explore our portfolio of stunning websites created for local shops just like yours. Each design reflects the unique brand identity of our clients while delivering exceptional user experience.
+                </p>
+            </div>
+            
+            <!-- Portfolio Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="portfolio-item group relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Boutique Website" 
+                         class="w-full h-80 object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full transition-all duration-300 translate-y-10 group-hover:translate-y-0">
+                        <h3 class="text-xl font-bold text-white mb-1">Vera's Boutique</h3>
+                        <p class="text-gray-300 mb-3">Fashion & Accessories</p>
+                        <a href="#" class="text-accent font-medium flex items-center">
+                            View Project
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item group relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Shoe Store Website" 
+                         class="w-full h-80 object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full transition-all duration-300 translate-y-10 group-hover:translate-y-0">
+                        <h3 class="text-xl font-bold text-white mb-1">Elite Footwear</h3>
+                        <p class="text-gray-300 mb-3">Shoe Store</p>
+                        <a href="#" class="text-accent font-medium flex items-center">
+                            View Project
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item group relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Jewelry Store Website" 
+                         class="w-full h-80 object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full transition-all duration-300 translate-y-10 group-hover:translate-y-0">
+                        <h3 class="text-xl font-bold text-white mb-1">Gold & Silver</h3>
+                        <p class="text-gray-300 mb-3">Jewelry Store</p>
+                        <a href="#" class="text-accent font-medium flex items-center">
+                            View Project
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-block px-8 py-3 btn-outline-gold rounded-full font-bold hover:text-primary">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-16 bg-accent text-primary">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">150+</div>
+                    <div class="text-lg font-medium">Websites Designed</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">98%</div>
+                    <div class="text-lg font-medium">Client Satisfaction</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">3.5M+</div>
+                    <div class="text-lg font-medium">Monthly Visitors</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">24/7</div>
+                    <div class="text-lg font-medium">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-serif font-medium text-lg">OUR PROCESS</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mt-3 mb-4">How We Create <span class="gold-text-gradient">Your Perfect Website</span></h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed">
+                    Our meticulous 6-step process ensures your website not only looks stunning but also delivers tangible business results.
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 top-0 h-full w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
+                
+                <!-- Steps -->
+                <div class="space-y-16">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
+                        <div class="flex-1 px-6 py-8 text-center md:text-left md:odd:text-right">
+                            <div class="w-16 h-16 md:absolute md:-left-8 md:odd:left-auto md:odd:-right-8 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 md:mb-0">
+                                <span class="text-2xl font-bold text-primary">1</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-primary mb-3">Discovery & Strategy</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We start by understanding your business, goals and target audience to create a tailored digital strategy.
+                            </p>
+                        </div>
+                        <div class="flex-1 px-6 hidden md:block">
+                            <div class="h-48 w-full bg-gray-100 rounded-xl"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
+                        <div class="flex-1 px-6 py-8 text-center md:text-left md:odd:text-right">
+                            <div class="w-16 h-16 md:absolute md:-left-8 md:odd:left-auto md:odd:-right-8 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 md:mb-0">
+                                <span class="text-2xl font-bold text-primary">2</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-primary mb-3">Design Concept</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Our designers create wireframes and mockups that reflect your brand identity and appeal to your customers.
+                            </p>
+                        </div>
+                        <div class="flex-1 px-6 hidden md:block">
+                            <div class="h-48 w-full bg-gray-100 rounded-xl"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
+                        <div class="flex-1 px-6 py-8 text-center md:text-left md:odd:text-right">
+                            <div class="w-16 h-16 md:absolute md:-left-8 md:odd:left-auto md:odd:-right-8 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 md:mb-0">
+                                <span class="text-2xl font-bold text-primary">3</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-primary mb-3">Content Creation</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We craft compelling website content and photography that showcases your products in the best light.
+                            </p>
+                        </div>
+                        <div class="flex-1 px-6 hidden md:block">
+                            <div class="h-48 w-full bg-gray-100 rounded-xl"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
+                        <div class="flex-1 px-6 py-8 text-center md:text-left md:odd:text-right">
+                            <div class="w-16 h-16 md:absolute md:-left-8 md:odd:left-auto md:odd:-right-8 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 md:mb-0">
+                                <span class="text-2xl font-bold text-primary">4</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-primary mb-3">Development</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Our developers build your website with clean, efficient code ensuring fast loading and smooth performance.
+                            </p>
+                        </div>
+                        <div class="flex-1 px-6 hidden md:block">
+                            <div class="h-48 w-full bg-gray-100 rounded-xl"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
+                        <div class="flex-1 px-6 py-8 text-center md:text-left md:odd:text-right">
+                            <div class="w-16 h-16 md:absolute md:-left-8 md:odd:left-auto md:odd:-right-8 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 md:mb-0">
+                                <span class="text-2xl font-bold text-primary">5</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-primary mb-3">Testing & Refinement</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We rigorously test every aspect of your website on all devices to ensure flawless performance.
+                            </p>
+                        </div>
+                        <div class="flex-1 px-6 hidden md:block">
+                            <div class="h-48 w-full bg-gray-100 rounded-xl"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 6 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:odd:flex-row-reverse">
+                        <div class="flex-1 px-6 py-8 text-center md:text-left md:odd:text-right">
+                            <div class="w-16 h-16 md:absolute md:-left-8 md:odd:left-auto md:odd:-right-8 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 md:mb-0">
+                                <span class="text-2xl font-bold text-primary">6</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-primary mb-3">Launch & Support</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We launch your website and provide ongoing support to keep it performing at its best.
+                            </p>
+                        </div>
+                        <div class="flex-1 px-6 hidden md:block">
+                            <div class="h-48 w-full bg-gray-100 rounded-xl"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-serif font-medium text-lg">CLIENT TESTIMONIALS</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mt-3 mb-4">What Our <span class="gold-text-gradient">Clients Say</span></h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed">
+                    Don't just take our word for it. Here's what some of our happy clients have to say about working with us.
+                </p>
+            </div>
+            
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper pb-12">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white p-8 rounded-xl max-w-2xl mx-auto">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-primary">Sarah Johnson</h4>
+                                    <p class="text-gray-500">Owner, Bella Boutique</p>
+                                </div>
+                            </div>
+                            <div class="text-gray-600 mb-6">
+                                <i class="fas fa-quote-left text-accent opacity-30 text-2xl mb-2"></i>
+                                <p class="leading-relaxed">
+                                    Working with LUXE DIGITAL was an absolute game-changer for my boutique. Our website not only looks fantastic but has increased our online sales by 300%. Their attention to detail and understanding of our brand was exceptional.
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex mr-4">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <div class="text-sm text-gray-500">March 15, 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white p-8 rounded-xl max-w-2xl mx-auto">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-primary">Michael Chen</h4>
+                                    <p class="text-gray-500">Owner, Urban Runway</p>
+                                </div>
+                            </div>
+                            <div class="text-gray-600 mb-6">
+                                <i class="fas fa-quote-left text-accent opacity-30 text-2xl mb-2"></i>
+                                <p class="leading-relaxed">
+                                    As a small shoe store, we needed a website that could compete with the big brands. LUXE DIGITAL delivered beyond our expectations. The site is beautiful, easy to manage, and has significantly grown our customer base. Their support team is responsive and always helpful.
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex mr-4">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <div class="text-sm text-gray-500">January 28, 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card bg-white p-8 rounded-xl max-w-2xl mx-auto">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-primary">Emily Rodriguez</h4>
+                                    <p class="text-gray-500">Founder, Luxe Jewelers</p>
+                                </div>
+                            </div>
+                            <div class="text-gray-600 mb-6">
+                                <i class="fas fa-quote-left text-accent opacity-30 text-2xl mb-2"></i>
+                                <p class="leading-relaxed">
+                                    The team at LUXE DIGITAL understood exactly what I wanted for my jewelry store's website, even when I wasn't sure myself. They guided me through the entire process and created a stunning site that perfectly showcases our products. Our online sales have never been better!
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex mr-4">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <div class="text-sm text-gray-500">December 5, 2022</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-serif font-medium text-lg">PRICING</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mt-3 mb-4">Flexible <span class="gold-text-gradient">Pricing Plans</span></h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
+                    We offer transparent pricing with customizable options to fit your budget and business needs. Our plans include everything you need to launch and grow your online presence.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition-all hover:scale-105">
+                    <div class="p-8 bg-gray-100 text-center">
+                        <h3 class="text-2xl font-bold text-primary mb-1">Starter</h3>
+                        <div class="text-gray-600">Perfect for new businesses</div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <div class="text-5xl font-bold text-primary mb-6">
+                            <span class="align-top text-lg">$</span>1,499
+                        </div>
+                        <ul class="space-y-4 mb-8 text-gray-600">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>5-Page Website</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Mobile Responsive Design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Basic SEO Setup</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Contact Form</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                                <span class="text-gray-400">No E-Commerce</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                                <span class="text-gray-400">No CMS Integration</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full px-6 py-3 btn-outline-gold rounded-full font-bold text-center text-accent hover:text-primary">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Popular Plan -->
+                <div class="relative bg-white rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 z-10">
+                    <div class="absolute top-0 right-0 bg-accent text-primary px-4 py-1 text-sm font-bold rounded-bl-lg rounded-tr-lg z-20">
+                        MOST POPULAR
+                    </div>
+                    <div class="p-8 bg-primary text-accent text-center border-b border-gray-200">
+                        <h3 class="text-2xl font-bold text-white mb-1">Premium</h3>
+                        <div class="text-accent">Best for growing businesses</div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <div class="text-5xl font-bold text-primary mb-6">
+                            <span class="align-top text-lg">$</span>3,499
+                        </div>
+                        <ul class="space-y-4 mb-8 text-gray-600">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Up to 15-Page Website</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Advanced Responsive Design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>E-Commerce Functionality</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Advanced SEO Implementation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>CMS Integration</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Basic Product Photography (5 items)</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full px-6 py-3 btn-gold rounded-full font-bold text-center text-primary">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-105">
+                    <div class="p-8 bg-gray-100 text-center">
+                        <h3 class="text-2xl font-bold text-primary mb-1">Custom</h3>
+                        <div class="text-gray-600">For established businesses</div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <div class="text-5xl font-bold text-primary mb-6">
+                            <span class="text-xl">Let's Talk</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 text-gray-600">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Custom Page Count</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Advanced E-Commerce</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Custom Web Applications</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Professional Product Photography</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Ongoing Marketing Support</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Premium Support Package</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full px-6 py-3 btn-outline-gold rounded-full font-bold text-center text-accent hover:text-primary">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <span class="text-accent font-serif font-medium text-lg">ABOUT US</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mt-3 mb-6">
+                        The Story Behind <span class="gold-text-gradient">LUXE DIGITAL</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb•6 leading-relaxed">
+                        Founded in 2018, LUXE DIGITAL was born from a passion for helping local businesses thrive in the digital age. We noticed that small shops were struggling with outdated, ineffective websites that didn't reflect their quality products or premium branding.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Our mission is to bridge the gap between luxury retail and digital excellence. With backgrounds in both high-end fashion and cutting-edge web technology, our team crafts websites that truly represent your brand's essence while delivering exceptional performance and user experience.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-medal text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">8+</div>
+                                <div class="text-gray-600">Years Experience</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 gold-gradient rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-xl text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">25+</div>
+                                <div class="text-gray-600">Team Members</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                             alt="LUXE DIGITAL Team" 
+                             class="rounded-2xl shadow-xl w-full">
+                        <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-lg max-w-xs">
+                            <h3 class="text-xl font-bold text-primary mb-3">Our Approach</h3>
+                            <p class="text-gray-600 mb-4">
+                                Every project begins with understanding your unique story and vision. We combine artistry with technology to create digital experiences that captivate and convert.
+                            </p>
+                            <a href="#contact" class="text-accent font-medium flex items-center">
+                                Learn More
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-24 bg-primary text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Ready to Elevate Your <span class="gold-text-gradient">Online Presence</span>?</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Let's discuss how we can create a stunning website that reflects your brand's luxury and grows your business.
+                </p>
+                <a href="#contact" class="inline-block px-8 py-4 btn-gold rounded-full font-bold hover:shadow-lg">
+                    Get Started Today
+                </a>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-accent rounded-full opacity-10 filter blur-xl"></div>
+            <div class="absolute bottom-20 right-20 w-40 h-40 bg-accent rounded-full opacity-10 filter blur-xl"></div>
+            <div class="absolute top-1/2 left-1/2 w-24 h-24 bg-accent rounded-full opacity-10 filter blur-xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <span class="text-accent font-serif font-medium text-lg">GET IN TOUCH</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-primary mt-3 mb-6">
+                        Let's Build <span class="gold-text-gradient">Your Vision</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Whether you're ready to start your project or just have questions, we're here to help. Fill out the form and we'll get back to you within 24 hours.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-primary mb-1">Our Office</h4>
+                                <p class="text-gray-600">123 Fashion Avenue, Suite 500 <br> New York, NY 10001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-primary mb-1">Email Us</h4>
+                                <p class="text-gray-600">hello@luxedigital.co <br> support@luxedigital.co</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 gold-gradient rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-primary mb-1">Call Us</h4>
+                                <p class="text-gray-600">+1 (212) 555-1234 <br> Mon-Fri, 9am-6pm EST</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="text-lg font-bold text-primary mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent hover:text-primary hover:border-accent transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent hover:text-primary hover:border-accent transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent hover:text-primary hover:border-accent transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-accent hover:text-primary hover:border-accent transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-accent" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-accent" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-accent">
+                            </div>
+                            <div>
+                                <label for="business" class="block text-sm font-medium text-gray-700 mb-1">Business Type*</label>
+                                <select id="business" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-accent" required>
+                                    <option value="">Select</option>
+                                    <option value="fashion">Fashion Boutique</option>
+                                    <option value="footwear">Footwear Store</option>
+                                    <option value="accessories">Accessories Shop</option>
+                                    <option value="jewelry">Jewelry Store</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Tell Us About Your Project*</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-accent" required></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="flex items-start">
+                                <input type="checkbox" class="mt-1 mr-2" required>
+                                <span class="text-sm text-gray-600">I agree to the <a href="#" class="text-accent hover:underline">privacy policy</a> and <a href="#" class="text-accent hover:underline">terms of service</a>.</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-4 btn-gold rounded-full font-bold">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-accent font-serif font-medium text-lg">FAQ</span>
+                <h2 class="text-4xl font-serif font-bold text-primary mt-3 mb-4">Frequently Asked <span class="gold-text-gradient">Questions</span></h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed">
+                    Common questions we receive from local shop owners about our premium website services.
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(1)">
+                        <h3 class="text-xl font-bold text-primary">How long does it take to build a website?</h3>
+                        <svg id="faq-icon-1" class="w-6 h-6 text-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div id="faq-answer-1" class="mt-4 hidden">
+                        <p class="text-gray-600">
+                            The timeline varies depending on the complexity of your website. Typically, our starter websites take 2-3 weeks, premium websites take 4-6 weeks, and custom projects can take 8-12 weeks. We'll provide a detailed timeline after understanding your specific requirements.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(2)">
+                        <h3 class="text-xl font-bold text-primary">Do you offer ongoing website maintenance?</h3>
+                        <svg id="faq-icon-2" class="w-6 h-6 text-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div id="faq-answer-2" class="mt-4 hidden">
+                        <p class="text-gray-600">
+                            Yes, we offer several maintenance packages to keep your website secure, up-to-date and performing at its best. Our packages include regular updates, security monitoring, backups, and priority support. We can tailor a maintenance plan to suit your specific needs and budget.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(3)">
+                        <h3 class="text-xl font-bold text-primary">What if I need help after my website launches?</h3>
+                        <svg id="faq-icon-3" class="w-6 h-6 text-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div id="faq-answer-3" class="mt-4 hidden">
+                        <p class="text-gray-600">
+                            All our websites come with 30 days of free support after launch. Beyond that, we offer different support packages to meet your ongoing needs. You can also purchase individual hours of support as needed. We're always here to help you get the most from your website.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(4)">
+                        <h3 class="text-xl font-bold text-primary">Can I update my website content myself?</h3>
+                        <svg id="faq-icon-4" class="w-6 h-6 text-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div id="faq-answer-4" class="mt-4 hidden">
+                        <p class="text-gray-600">
+                            Absolutely! We build most websites with a content management system (CMS) that allows you to easily update text, images, and products without any technical knowledge. We'll provide training and documentation to help you manage your content confidently.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(5)">
+                        <h3 class="text-xl font-bold text-primary">Do you provide hosting services?</h3>
+                        <svg id="faq-icon-5" class="w-6 h-6 text-accent transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/s">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                    <div id="faq-answer-5" class="mt-4 hidden">
+                        <p class="text-gray-600">
+                            Yes, we offer premium hosting services optimized for performance and security. Our hosting includes automatic updates, daily backups, security monitoring, and 24/7 technical support. However, if you prefer to use your own hosting provider, we can accommodate that as well.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-3xl font-bold mb-4">
+                        <span class="gold-text-gradient">LUXE</span> DIGITAL
+                    </h3>
+                    <p class="text-gray-300 mb-6">
+                        Premium website solutions for luxury local shops. We help boutique businesses establish a powerful online presence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center text-gray-300 hover:bg-accent hover:text-primary hover:border-accent transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center text-gray-300 hover:bg-accent hover:text-primary hover:border-accent transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center text-gray-300 hover:bg-accent hover:text-primary hover:border-accent transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center text-gray-300 hover:bg-accent hover:text-primary hover:border-accent transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Website Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">E-Commerce Development</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">SEO Optimization</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Product Photography</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Website Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Our Process</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-accent mt-1 mr-3"></i>
+                            <span class="text-gray-300">123 Fashion Avenue, New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-accent mr-3"></i>
+                            <span class="text-gray-300">+1 (212) 555-1234</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-accent mr-3"></i>
+                            <span class="text-gray-300">hello@luxedigital.co</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 mb-4 md:mb-0">
+                        &copy; 2023 LUXE DIGITAL. All rights reserved.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 gold-gradient rounded-full flex items-center justify-center text-primary shadow-lg back-to-top transition-all cursor-pointer">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+</html>
